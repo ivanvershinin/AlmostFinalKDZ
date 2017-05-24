@@ -5,20 +5,48 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:KDZVERSH"
       mc:Ignorable="d" 
-      d:DesignHeight="319.481"
-      Title="Addinggame" Width="406.494" Unloaded="Page_Unloaded">
-
+      d:DesignHeight="441.558" d:DesignWidth="493.506"
+      Title="Addinggame" Unloaded="Page_Unloaded">
+    <Page.Background>
+        <ImageBrush ImageSource="img\back.jpg" Stretch="UniformToFill"/>
+    </Page.Background>
     <Grid>
-        <Label x:Name="label" Content="Добавьте имя, жанр и возрастное ограничение новой игры"  HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Width="343"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="146,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Add Game" HorizontalAlignment="Left" Margin="321,279,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <ComboBox x:Name="comboBox_genres" HorizontalAlignment="Left" Margin="146,124,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboBox_age" HorizontalAlignment="Left" Margin="146,183,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1" Content="Назавние" HorizontalAlignment="Left" Margin="146,41,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="label1_Copy" Content="Жанр" HorizontalAlignment="Left" Margin="146,93,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="label1_Copy1" Content="Возраст" HorizontalAlignment="Left" Margin="146,152,0,0" VerticalAlignment="Top" Width="153"/>
-        <Label x:Name="labelError" Content="" HorizontalAlignment="Left" Margin="10,277,0,0" VerticalAlignment="Top" Width="256"/>
-        <ComboBox x:Name="comboBox_placeholder" HorizontalAlignment="Left" Margin="146,227,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Add game, genre, age and placeholder"  HorizontalAlignment="Left" Margin="127,27,0,0" VerticalAlignment="Top" Width="217"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="179,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="addgame" Content="Add Game" HorizontalAlignment="Left" Margin="361,308,0,0" VerticalAlignment="Top" Width="75" Click="addgame_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox x:Name="comboBox_genres" HorizontalAlignment="Left" Margin="179,143,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <ComboBox x:Name="comboBox_age" HorizontalAlignment="Left" Margin="179,197,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label x:Name="label1" Content="Name" HorizontalAlignment="Left" Margin="179,68,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="label1_Copy" Content="Genre" HorizontalAlignment="Left" Margin="179,117,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="label1_Copy1" Content="Age" HorizontalAlignment="Left" Margin="179,171,0,0" VerticalAlignment="Top" Width="153"/>
+        <Label x:Name="labelError" Content="" HorizontalAlignment="Left" Margin="193,335,0,0" VerticalAlignment="Top" Width="106"/>
+        <ComboBox x:Name="comboBox_placeholder" HorizontalAlignment="Left" Margin="179,254,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="55,308,0,0" VerticalAlignment="Top" Width="75" Click="BackButton_Click" MouseEnter="BackButton_MouseEnter" MouseLeave="BackButton_MouseLeave">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="label2" Content="Placeholder" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="179,228,0,0"/>
 
     </Grid>
 </Page>

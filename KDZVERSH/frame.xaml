@@ -1,0 +1,15 @@
+﻿<Window x:Class="KDZVERSH.Frame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KDZVERSH"
+        mc:Ignorable="d"
+        Title="GameBible v1.015 Pro Beta" Height="441.558" Width="493.506" ResizeMode="NoResize">
+    <Grid>
+        <Frame 
+Source= "Frame.xaml" 
+Name="FrameName" NavigationUIVisibility="Hidden">
+        </Frame>
+    </Grid>
+</Window>

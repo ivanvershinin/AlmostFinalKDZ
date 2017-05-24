@@ -5,11 +5,23 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:KDZVERSH"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="441.558" d:DesignWidth="493.506"
       Title="Search" Unloaded="Page_Unloaded">
+    <Page.Background>
+        <ImageBrush ImageSource="img\back.jpg" Stretch="UniformToFill"/>
+    </Page.Background>
 
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Height="246" Width="272"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="75,28,0,0" VerticalAlignment="Top" Height="246" Width="348">
+            <DataGrid.Effect>
+                <DropShadowEffect/>
+            </DataGrid.Effect>
+        </DataGrid>
+        <Button x:Name="Back_button" Content="Back" HorizontalAlignment="Left" Margin="210,319,0,0" VerticalAlignment="Top" Width="75" Click="Back_button_Click" MouseEnter="Back_button_MouseEnter" MouseLeave="Back_button_MouseLeave">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Page>

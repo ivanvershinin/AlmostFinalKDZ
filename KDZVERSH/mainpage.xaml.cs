@@ -31,7 +31,7 @@ namespace KDZVERSH
            
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void add_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav;
             Addinggame CP = new Addinggame();
@@ -39,7 +39,7 @@ namespace KDZVERSH
             nav.Navigate(CP);
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void edit_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav;
             Page2 CP = new Page2();
@@ -47,12 +47,13 @@ namespace KDZVERSH
             nav.Navigate(CP);
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void search_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav;
             Search CP = new Search(textBox.Text,comboBox.Text,comboBox1.Text,comboBox2.Text);
             nav = NavigationService.GetNavigationService(this);
             nav.Navigate(CP);
+            logger.Instance.Log("Был произведен поиск.");
         }
 
         private void Page_Unloaded(object sender, RoutedEventArgs e)
@@ -63,6 +64,17 @@ namespace KDZVERSH
         private void checkBox_Checked(object sender, RoutedEventArgs e)
         {
             comboBox2.Text = "";
+        }
+
+
+        private void search_MouseEnter(object sender, MouseEventArgs e)
+        {
+            search.Content = "GO!";
+        }
+
+        private void search_MouseLeave(object sender, MouseEventArgs e)
+        {
+            search.Content = "Search";
         }
     }
 }

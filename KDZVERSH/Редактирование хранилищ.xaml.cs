@@ -26,11 +26,11 @@ namespace KDZVERSH
             comboBox.ItemsSource = Staticheskyu.Collection.Keys;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void confirm_Click(object sender, RoutedEventArgs e)
         {
             if (textBox.Text == "")
             {
-                labelError.Content = "Osipka";
+                labelError.Content = "Plaseholder or new name not chosen";
             }
             else
             {
@@ -53,6 +53,7 @@ namespace KDZVERSH
                 //    }
                 //}
                 this.Close();
+                logger.Instance.Log("Одно из хранилищ было переименновано.");
             }
             
         }

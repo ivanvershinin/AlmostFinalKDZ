@@ -5,14 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KDZVERSH"
         mc:Ignorable="d"
-        Title="Редактирование хранилищ" Height="350" Width="256.06" Unloaded="Window_Unloaded">
+        Height="260" Width="250"
+        Title="Editing Placeholders"  Unloaded="Window_Unloaded" ResizeMode="NoResize" >
+    
     <Grid>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="58,44,0,0" VerticalAlignment="Top" Width="144"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="58,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144"/>
-        <Button x:Name="button" Content="Confirm" HorizontalAlignment="Left" Margin="85,177,0,0" VerticalAlignment="Top" Width="95" Click="button_Click"/>
-        <Label x:Name="label" Content="Новое имя " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="58,77,0,0" Width="144"/>
-        <Label x:Name="label1" Content="Выберите хранилище" HorizontalAlignment="Left" Margin="58,18,0,0" VerticalAlignment="Top" Width="144"/>
-        <Label x:Name="labelError" Content="" HorizontalAlignment="Left" Margin="85,256,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.662,-0.506" Width="95"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="36,44,0,0" VerticalAlignment="Top" Width="144">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="36,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="confirm" Content="Confirm" HorizontalAlignment="Left" Margin="64,153,0,0" VerticalAlignment="Top" Width="95" Click="confirm_Click"/>
+        <Label x:Name="label" Content="New name " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,77,0,0" Width="144"/>
+        <Label x:Name="label1" Content="Choose the placeholder" HorizontalAlignment="Left" Margin="36,18,0,0" VerticalAlignment="Top" Width="144"/>
+        <Label x:Name="labelError" Content="" HorizontalAlignment="Left" Margin="11,180,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.662,-0.506" Width="222"/>
 
     </Grid>
 </Window>

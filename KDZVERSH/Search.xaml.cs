@@ -27,6 +27,24 @@ namespace KDZVERSH
             Staticheskyu.Save();
         }
 
+        private void Back_button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav;
+            Page1 CP = new Page1();
+            nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(CP);
+        }
+
+        private void Back_button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Back_button.Content = "GO!";
+        }
+
+        private void Back_button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Back_button.Content = "Back";
+        }
+
         List<Game> answer = new List<Game>();
         public Search(string Name,  string Age, string Genre, string Storage)
         {

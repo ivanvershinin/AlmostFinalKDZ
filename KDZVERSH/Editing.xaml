@@ -7,21 +7,56 @@
       mc:Ignorable="d" 
       d:DesignHeight="441.558" d:DesignWidth="493.506"
       Title="Page2">
+    <Page.Background>
+        <ImageBrush ImageSource="img\back.jpg" Stretch="UniformToFill"/>
+    </Page.Background>
 
     <Grid>
-        <Label x:Name="label" Content="Редактирование игр" HorizontalAlignment="Left" Margin="62,24,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_gametoedit" HorizontalAlignment="Left" Margin="62,63,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_gametoedit_SelectionChanged"/>
-        <TextBox x:Name="textBox_placeholder" HorizontalAlignment="Left" Height="23" Margin="219,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="158" Margin="62,133,0,0" Stroke="Black" VerticalAlignment="Top" Width="155"/>
-        <ComboBox x:Name="comboBox_replacetoanotherplaceholder" HorizontalAlignment="Left" Margin="79,157,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.287,0.42"/>
-        <Button x:Name="button" Content="Remove" HorizontalAlignment="Left" Margin="102,219,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Unloaded="button_Unloaded"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="158" Margin="293,133,0,0" Stroke="Black" VerticalAlignment="Top" Width="158"/>
-        <TextBox x:Name="textBox_newplaceholder" HorizontalAlignment="Left" Height="23" Margin="305,157,0,0" TextWrapping="Wrap" Text="Enter Name" VerticalAlignment="Top" Width="120" TextChanged="textBox_newplaceholder_TextChanged" GotFocus="textBox_newplaceholder_GotFocus" LostFocus="textBox_newplaceholder_LostFocus"/>
-        <TextBox x:Name="textBox_sizeofnewplaceholder" HorizontalAlignment="Left" Height="23" Margin="305,204,0,0" TextWrapping="Wrap" Text="Enter size of storage" VerticalAlignment="Top" Width="120" TextChanged="textBox_sizeofnewplaceholder_TextChanged" GotFocus="textBox_sizeofnewplaceholder_GotFocus" LostFocus="textBox_sizeofnewplaceholder_LostFocus"/>
-        <Button x:Name="button1" Content="Create" HorizontalAlignment="Left" Margin="331,250,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Delete" HorizontalAlignment="Left" Margin="376,64,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Editing Placeholders" HorizontalAlignment="Left" Margin="62,351,0,0" VerticalAlignment="Top" Width="389" Click="button3_Click"/>
-        <Label x:Name="labelError" Content="" HorizontalAlignment="Left" Margin="160,406,0,0" VerticalAlignment="Top" Width="179"/>
+        <Label x:Name="label" Content="Editing games" HorizontalAlignment="Left" Margin="203,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_gametoedit" HorizontalAlignment="Left" Margin="36,73,0,0" VerticalAlignment="Top" Width="136" SelectionChanged="comboBox_gametoedit_SelectionChanged">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <TextBox x:Name="textBox_placeholder" HorizontalAlignment="Left" Height="23" Margin="203,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="158" Margin="36,138,0,0" Stroke="Black" VerticalAlignment="Top" Width="155">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <ComboBox x:Name="comboBox_replacetoanotherplaceholder" HorizontalAlignment="Left" Margin="52,157,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.287,0.42"/>
+        <Button x:Name="replace" Content="Replace" HorizontalAlignment="Left" Margin="72,224,0,0" VerticalAlignment="Top" Width="75" Click="replace_Click" Unloaded="replace_Unloaded"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="158" Margin="267,133,0,0" Stroke="Black" VerticalAlignment="Top" Width="158">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBox x:Name="textBox_newplaceholder" HorizontalAlignment="Left" Height="23" Margin="286,157,0,0" TextWrapping="Wrap" Text="Enter Name" VerticalAlignment="Top" Width="120" TextChanged="textBox_newplaceholder_TextChanged" GotFocus="textBox_newplaceholder_GotFocus" LostFocus="textBox_newplaceholder_LostFocus"/>
+        <TextBox x:Name="textBox_sizeofnewplaceholder" HorizontalAlignment="Left" Height="23" Margin="286,209,0,0" TextWrapping="Wrap" Text="Enter size of storage" VerticalAlignment="Top" Width="120" TextChanged="textBox_sizeofnewplaceholder_TextChanged" GotFocus="textBox_sizeofnewplaceholder_GotFocus" LostFocus="textBox_sizeofnewplaceholder_LostFocus"/>
+        <Button x:Name="create" Content="Create" HorizontalAlignment="Left" Margin="307,248,0,0" VerticalAlignment="Top" Width="75" Click="create_Click"/>
+        <Button x:Name="delete" Content="Delete" HorizontalAlignment="Left" Margin="350,73,0,0" VerticalAlignment="Top" Width="75" Click="delete_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="editplch" Content="Editing Placeholders" HorizontalAlignment="Left" Margin="36,351,0,0" VerticalAlignment="Top" Width="389" Click="editplch_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="labelError" HorizontalAlignment="Left" Margin="114,296,0,0" VerticalAlignment="Top" Width="277" Height="36"/>
+        <Button x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="36,378,0,0" VerticalAlignment="Top" Width="75" Click="back_Click" MouseEnter="back_MouseEnter" MouseLeave="back_MouseLeave">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="label1" Content="Choose the game to edit" HorizontalAlignment="Left" Margin="36,47,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Choose the placeholder" HorizontalAlignment="Left" Margin="36,112,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label x:Name="label3" Content="Create a new placeholder" HorizontalAlignment="Left" Margin="267,107,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

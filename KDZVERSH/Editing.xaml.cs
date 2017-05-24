@@ -28,7 +28,7 @@ namespace KDZVERSH
             comboBox_replacetoanotherplaceholder.ItemsSource = Staticheskyu.Collection.Keys;
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
+        private void editplch_Click(object sender, RoutedEventArgs e)
         {
             MainWindow Prosto = new MainWindow();
             Prosto.ShowDialog();
@@ -37,7 +37,7 @@ namespace KDZVERSH
             
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void delete_Click(object sender, RoutedEventArgs e)
         {
 
             if (comboBox_gametoedit.SelectedIndex == -1)
@@ -54,6 +54,7 @@ namespace KDZVERSH
                 comboBox_gametoedit.ItemsSource = Staticheskyu.dictionary.Keys;
                 textBox_placeholder.Text = "";
                 labelError.Content = "Object Deleted";
+                logger.Instance.Log("Была удалена одна из игр");
                 //for (int i = 0; i < Staticheskyu.Placeholders.Count; i++)
                 //{
                 //    if (Staticheskyu.Placeholders[i].Name == PlaceName)
@@ -85,7 +86,7 @@ namespace KDZVERSH
            if(comboBox_gametoedit.SelectedIndex!=-1) textBox_placeholder.Text = Staticheskyu.dictionary[comboBox_gametoedit.SelectedItem.ToString()];
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void replace_Click(object sender, RoutedEventArgs e)
         {
             if (comboBox_gametoedit.SelectedIndex == -1 || comboBox_replacetoanotherplaceholder.SelectedIndex == -1)
                 labelError.Content = "Game or Placeholder not chosen";
@@ -102,13 +103,14 @@ namespace KDZVERSH
                 Staticheskyu.Collection[comboBox_replacetoanotherplaceholder.Text].Games.Add(comboBox_gametoedit.Text, t);
                 textBox_placeholder.Text = comboBox_replacetoanotherplaceholder.Text;
                 comboBox_replacetoanotherplaceholder.SelectedIndex = -1;
-                
+                logger.Instance.Log("Одна из игр была перемещена в другое хранилище.");
+
 
 
             }
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void create_Click(object sender, RoutedEventArgs e)
         {
             int size;
             if (int.TryParse(textBox_sizeofnewplaceholder.Text, out size) == false)
@@ -130,6 +132,7 @@ namespace KDZVERSH
                     comboBox_replacetoanotherplaceholder.ItemsSource = Staticheskyu.Collection.Keys;
                     textBox_newplaceholder.Text = "";
                     textBox_sizeofnewplaceholder.Text = "";
+                    logger.Instance.Log("Было создано новое хранилище.");
                 }
             }
         }
@@ -164,9 +167,27 @@ namespace KDZVERSH
             if (textBox_newplaceholder.Text == "") textBox_newplaceholder.Text = "Enter Name";
         }
 
-        private void button_Unloaded(object sender, RoutedEventArgs e)
+        private void replace_Unloaded(object sender, RoutedEventArgs e)
         {
             Staticheskyu.Save();
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav;
+            Page1 CP = new Page1();
+            nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(CP);
+        }
+
+        private void back_MouseEnter(object sender, MouseEventArgs e)
+        {
+            back.Content = "GO!";
+        }
+
+        private void back_MouseLeave(object sender, MouseEventArgs e)
+        {
+            back.Content = "Back";
         }
     }
 }
