@@ -44,14 +44,7 @@ namespace KDZVERSH
                     Staticheskyu.dictionary.Add(temp, t.Name);
 
                 }
-                //for (int i = 0; i < Staticheskyu.Placeholders.Count; i++)
-                //{
-                //    if (Staticheskyu.Placeholders[i].Name == comboBox.Text)
-                //    {
-                //        Staticheskyu.Placeholders[i].Name = textBox.Text;
-                //        break;
-                //    }
-                //}
+               
                 this.Close();
                 logger.Instance.Log("Одно из хранилищ было переименновано.");
             }

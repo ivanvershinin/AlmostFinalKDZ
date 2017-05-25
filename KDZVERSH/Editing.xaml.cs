@@ -55,28 +55,7 @@ namespace KDZVERSH
                 textBox_placeholder.Text = "";
                 labelError.Content = "Object Deleted";
                 logger.Instance.Log("Была удалена одна из игр");
-                //for (int i = 0; i < Staticheskyu.Placeholders.Count; i++)
-                //{
-                //    if (Staticheskyu.Placeholders[i].Name == PlaceName)
-                //    {
-                //        for (int g = 0; g < Staticheskyu.Placeholders[i].Games.Count; g++)
-                //        {
-                //            if (Staticheskyu.Placeholders[i].Games[g].Name == comboBox_gametoedit.Text)
-                //            {
-                //                Staticheskyu.Placeholders[i].Games.RemoveAt(g);
-                //                labelError.Content = "Object Deleted";
-                //                goto touchpoint;
-                //            }
-                //        }
-                //        labelError.Content = "Not Found";
-                //    }
-                //}
-                //touchpoint:
-                //for (int i = 0; i < Staticheskyu.Vyvod.Count; i++)
-                //{
-                //    if (Staticheskyu.Vyvod[i].Name == comboBox_gametoedit.Text)
-                //        Staticheskyu.Vyvod.RemoveAt(i);
-                //}
+              
             }
         }
 
